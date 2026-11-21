@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I'm Not a Robot — My Little Human</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/web/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/web/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/web/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#fff0fa">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Little Human">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <main class="main">
+      <a class="back" href="index.html">&larr; Games</a><br>
+      <h1 class="page-title">I'm Not a Robot</h1>
+
+      <div class="game-stage">
+
+        <div class="keychain keychain--side">
+          <button id="robotBox" class="robot-card" type="button">
+            <span class="robot-check">
+              <span class="robot-check-inner">
+                <span class="robot-check-frame">
+                  <img id="robotImg" alt="" hidden>
+                  <span id="robotLabel" class="robot-label"></span>
+                </span>
+              </span>
+              <svg class="robot-cursor" viewBox="0 0 24 30" aria-hidden="true">
+                <path d="M2 2 L2 24 L8 18.5 L12 28 L16.5 26 L12.5 16.5 L20 16.5 Z" fill="#a3a3a5" stroke="#7d7d7f" stroke-width="1.2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="robot-text">I'm not a robot</span>
+          </button>
+        </div>
+
+        <div class="stats">
+          <span>Clicks: <b id="clicks">0</b></span>
+          <span>Golden: <b id="golden">0</b></span>
+        </div>
+        <p id="robotMsg" class="msg"></p>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="assets/web/ui/logo.png" alt="My Little Human" data-placeholder="My Little Human">
+      </a>
+      <nav class="menu">
+        <a class="menu-btn" href="index.html">HOME</a>
+        <a class="menu-btn active" href="index.html#games">GAMES</a>
+      </nav>
+      <div class="mascot-wrap"><img class="mascot" src="assets/web/ui/mascota.png" alt="mascot" data-placeholder="mascota.png"></div>
+    </aside>
+
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/robot.js"></script>
+</body>
+</html>

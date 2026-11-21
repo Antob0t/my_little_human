@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Puzzle — My Little Human</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/web/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/web/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/web/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#fff0fa">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Little Human">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <main class="main">
+      <a class="back" href="index.html">&larr; Games</a><br>
+      <h1 class="page-title">Dog Puzzle</h1>
+
+      <div class="game-stage">
+
+        <div class="keychain keychain--top">
+          <div class="captcha">
+            <div class="captcha-header">
+              <span class="h-small">Select all squares with</span>
+              <span class="h-big">dog</span>
+              <span class="h-small">if there are none, click skip</span>
+            </div>
+
+            <div id="board" class="puzzle-board" aria-label="Puzzle board"></div>
+
+            <div class="captcha-footer">
+              <button id="reloadBtn" class="icon-btn" type="button" aria-label="Shuffle" title="Shuffle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3v5.2h-5.2"/></svg>
+              </button>
+              <button id="audioBtn" class="icon-btn" type="button" aria-label="Sound on/off">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="2.5" y="13.5" width="5.5" height="8" rx="2.2" fill="currentColor" stroke="none"/><rect x="16" y="13.5" width="5.5" height="8" rx="2.2" fill="currentColor" stroke="none"/><line class="mute-slash" x1="3" y1="3" x2="21" y2="21"/></svg>
+              </button>
+              <button id="infoBtn" class="icon-btn" type="button" aria-label="Help" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="17.5" stroke-width="3.2" stroke-linecap="round"/><circle cx="12" cy="7" r="1.8" fill="currentColor" stroke="none"/></svg>
+              </button>
+              <button id="skipBtn" class="skip-btn" type="button">Skip</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="helpPanel" class="help-panel" hidden>
+          <p>Tap a tile next to the gap (or in its row/column) to slide it. Rebuild the picture!</p>
+          <p>↻ shuffles · Skip shows the solution.</p>
+          <div id="previewWrap"></div>
+          <label><input type="checkbox" id="numbersToggle"> Show numbers</label>
+        </div>
+
+        <div class="stats">
+          <span>Moves: <b id="moves">0</b></span>
+          <span>Time: <b id="time">0:00</b></span>
+          <span>Best: <b id="best">-</b></span>
+        </div>
+        <p id="puzzleMsg" class="msg"></p>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="assets/web/ui/logo.png" alt="My Little Human" data-placeholder="My Little Human">
+      </a>
+      <nav class="menu">
+        <a class="menu-btn" href="index.html">HOME</a>
+        <a class="menu-btn active" href="index.html#games">GAMES</a>
+      </nav>
+      <div class="mascot-wrap"><img class="mascot" src="assets/web/ui/mascota.png" alt="mascot" data-placeholder="mascota.png"></div>
+    </aside>
+
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/puzzle.js"></script>
+</body>
+</html>

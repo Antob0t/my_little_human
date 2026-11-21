@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Human</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/web/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/web/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/web/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#fff0fa">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Little Human">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <main class="main">
+      <h1 id="games" class="page-title">GAMES</h1>
+
+      <div class="games-grid">
+        <a class="game-card card-robot" href="robot.html">
+          <img class="thumb" src="assets/web/ui/1.png" alt="I'm Not a Robot" data-placeholder="I'm Not a Robot">
+          <span class="game-name">I'm Not a Robot</span>
+        </a>
+
+        <a class="game-card card-puzzle" href="puzzle.html">
+          <img class="thumb" src="assets/web/ui/12.png" alt="Dog Puzzle" data-placeholder="Dog Puzzle">
+          <span class="game-name">Dog Puzzle</span>
+        </a>
+
+        <a class="game-card card-lucky" href="lucky.html">
+          <img class="thumb" src="assets/web/ui/6.png" alt="Lucky Clicker" data-placeholder="Lucky Clicker">
+          <span class="game-name">Lucky Clicker</span>
+        </a>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="assets/web/ui/logo.png" alt="My Little Human" data-placeholder="My Little Human">
+      </a>
+      <nav class="menu">
+        <a class="menu-btn active" href="index.html">HOME</a>
+        <a class="menu-btn" href="index.html#games">GAMES</a>
+      </nav>
+      <div class="mascot-wrap"><img class="mascot" src="assets/web/ui/mascota.png" alt="mascot" data-placeholder="mascota.png"></div>
+    </aside>
+
+  </div>
+  <script src="js/common.js"></script>
+</body>
+</html>
